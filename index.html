@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Veljko Cvetkovic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <div id="dhead" class="container">
+      <div class="row">
+        <div id="dpic">
+          <img src="images/me.jpg" class="ppic" />
+        </div>
+        <div id="ddesc">
+          <h1>Veljko Cvetkovic</h1>
+          <h2>Computer Science Student at Virginia Tech</h2>
+          <div id="dico">
+            <a href="https://github.com/veljkocvetkovic"><img src="images/cgithub.svg" class="iico" /></a>
+            <a href="https://www.linkedin.com/in/veljko-cvetkovic1/"><img src="images/linkedinG.svg" class="iico" /></a>
+            <img src="images/cemail.svg" style="cursor: pointer;" class="iico" id="iemail" title="click to reveal" />
+          </div>
+          <div id="demail"></div> <!-- will reveal email -->
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div id="history" class="container">
+
+      <div class="entry row">
+        <div class="timespan">
+          2023 - 2026
+        </div>
+        <div class="ico">
+          <div class="entry-dot"></div>
+          <img src="images/vtOFF.svg" />
+        </div>
+        <div class="desc">
+          BSc at Virginia Polytechnic and State University with a major in computer science - in progress until May 2026. My interests are in machine learning & AI and embedded programming. Earned a spot on the Dean's list my freshman fall semester and a spot on the President's list in my spring semester.
+
+          <br><br>
+            Member of BOLT Electric Vehicle Design Team, where I led an R&D project on balance control, and worked on assembling battery packs for the <a href="https://www.vtbolt.com/history">BOLT VS</a> superbike.
+        </div>
+      </div>
+
+      <div class="entry row">
+        <div class="timespan">
+          2019 - 2023
+        </div>
+        <div class="ico">
+          <div class="entry-dot"></div>
+          <img src="images/CPES-logo.jpg" />
+        </div>
+        <div class="desc">
+          Student Intern at <a href="https://cpes.vt.edu/">CPES</a>. Worked under supervision of Dr. Dushan Boroyevich on real-time UART communication protocols on ESP-32 microcontrollers and PEBB (Power Electronics Building Block) hardware controller. Used Tektronix MSO64 6 Series 4GHz 25GS/s oscilloscope to measure signals from PEBB. Created documetation for HMI using Raspberry Pi display.
+
+          <br><br>
+          Worked on video editing for tutorial presented on High-Voltage-Direct-Current (HVDC) systems - presented by Dr. Dushan Boroyevich. Also supported lab equipment installation as a volunteer in new high-power lab (power supplies, oscilloscopes, soldering stations, waveform generators, multimeters, computers, etc.).
+        </div>
+      </div>
+
+    <div id="pet-projects" class="container">
+      <div class="ctitle">projects</div>
+
+      <div class="project">
+        <div class="pico"><img src="images/ripemind.png" /></div>
+        <div class="pdesc"><a href="https://github.com/veljkocvetkovic/Freshness-Model-VTHacks">RIPEMIND</a> - Web app that determines if fruit is safe to eat or rotten using custom machine learning algorithm for image processing. SQL database for users to register and store login information. (Hackathon Project)</div>
+        <div class="pend"></div>
+      </div>
+
+      <div class="project">
+        <div class="pico"><img src="images/pickup.JPG" /></div>
+        <div class="pdesc">Designed and built a custom electric guitar pickup - single coil (6 kΩ) for a Fender Stratocaster guitar. Custom pickup housing designed in Autodesk Inventor and 3D printed - coil was hand-wound using 46 gauge wire using a makeshift drill-winding setup in my garage. Tested in real body of a scrap guitar and with an oscilloscope. </div>
+        <div class="pend"></div>
+      </div>
+
+      <div class="project">
+        <div class="pico"><img src="images/diffSwerve.png" /></div>
+        <div class="pdesc">Mechanical system differential similar to "diff-swerve" omnidirectional robotics wheels. Fully custom designed and 3D printed/laser cut components. Two servos controlled by potentiometers change the voltage (speed) of each bevel gear independently, to show various actions of the system under different loads. Controlled using Arduino Uno. </div>
+        <div class="pend"></div>
+      </div>
+
+      <div class="project">
+        <div class="pdesc">Smart Wall Plug - custom 15 A 120 V electronic switch controlled by a Raspberry Pi and electromagnetic relay through a web app run on local ip. Connection to Raspberry Pi over Wifi with a Flask application running on Apache to connect to web app. Good for turning off my desk lamp at night from bed. </div>
+        <div class="pend"></div>
+      </div>
+    </div>
+    </div>
+
+    <div class="container">
+      <div class="ctitle">other information</div>
+      <ul style="padding-left: 10px;">
+        <li>US Citizen</li>
+        <li>Self-taught bass guitarist - been playing for 8 years, performed at restaurants and bars and at misc events around my local town. Now also started playing electric guitar. The repitoire has mostly 70's rock and roll and Pink Floyd.</li>
+        <li>Robotics team made it to the 2022 World Championship in Houston Texas - I was a programmer at this time working on computer vision and automatic robot aiming as well as PID control. </li>
+        <li>I like collecting vinyl records - making a wall in my room of some of my favorite all time albums</li>
+      </ul>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+    <!-- hide email -->
+    <script type="text/javascript">
+      const rot13 = (message) => {
+        const alpha = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM';
+        return message.replace(/[a-z]/gi, letter => alpha[alpha.indexOf(letter) + 13]);
+      }
+      var e_is_shown = false;
+      document.getElementById('iemail').addEventListener("click", function(){
+        let demail = document.getElementById('demail');
+        let msg = "irywxb@ig.rqh"
+        demail.innerHTML = rot13(msg);
+        demail.style.opacity = e_is_shown ? 0 : 1;
+        e_is_shown = !e_is_shown;
+      })
+    </script>
+  </body>
+</html>
