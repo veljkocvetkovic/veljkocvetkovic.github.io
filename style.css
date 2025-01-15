@@ -201,7 +201,8 @@ hr {
     clear: both;
 }
 .pico img {
-    height: 80px;
+    height: 100px;
+    width: 120px;
     border-radius: 5px;
     border: 1px solid #999;
 }
